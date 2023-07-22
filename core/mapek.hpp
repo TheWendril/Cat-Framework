@@ -18,10 +18,10 @@ class MAPEK{
 
 public:
 
-    Monitor _Monitor{};
-    Analyze _Analyze{};
-    Planner _Planner{};
-    Executor _Executor{};
+    // Monitor _Monitor{};
+    // Analyze _Analyze{};
+    // Planner _Planner{};
+    // Executor _Executor{};
 
     void run();
     void async_run();
