@@ -1,12 +1,15 @@
-#include "./core/utils/configMap.hpp"
 #include <iostream>
+#include "teste/knowledge.hpp"
+#include "teste/model.hpp"
+
 
 int main(){
 
-    CAT::configMap configmap = CAT::configMap{};
-
-    configmap.IAModel = CAT::IAModel::cnn;
-
-    std::cout <<  configmap.timeout << std::endl;
-
+    meuModel mdl;
+    mdl.a = 10;
+    CAT::Knowledge * mkn = new CAT::Knowledge();
+    mkn->setCurrentState(mdl);
+    meuModel * mdl2 = static_cast<meuModel*>(mkn->getCurrentState());
+    std::cout << mdl2->a << std::endl;
+    
 }

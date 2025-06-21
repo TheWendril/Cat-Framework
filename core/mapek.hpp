@@ -10,30 +10,17 @@
 
 
 #include <iostream>
-#include "./utils/logs.hpp"
+#include "loopComponent.hpp"
 
 namespace CAT{
 
-class MAPEK{
+class MAPEK : public LoopComponent{
 
 public:
 
-    // Monitor _Monitor{};
-    // Analyze _Analyze{};
-    // Planner _Planner{};
-    // Executor _Executor{};
+    virtual void configure() = 0;
+}; 
 
-    void run();
-    void async_run();
-
-    class MAPEKBuilder{
-
-    }; // end of MAPEKBuilderClass
-
-}; // end of MAPEK class
-
-
-
-} // end of namespace
+} 
 
 #endif

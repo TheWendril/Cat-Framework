@@ -6,15 +6,18 @@
 */
 
 
-#ifndef MODELHPP
-#define MODELHPP
+#ifndef ACTIONHPP
+#define ACTIONHPP
 
 namespace CAT {
 
-    struct Model {
-        virtual ~Model() = default;
-    };
-    
+class Action
+{
+public:
+    virtual void act() = 0;
+    virtual ~Action() = default;
+};
+
 };
 
 #endif
