@@ -17,7 +17,6 @@ namespace CAT{
 class MAPEK : public LoopComponent{
 
 public:
-
     virtual void configure() = 0;
 }; 
 

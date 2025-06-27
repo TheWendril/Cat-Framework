@@ -17,7 +17,15 @@ class Planner : public CAT::Element {
 
 public:
 
-    void update(){
+    void run() {
+        // Executa a ação de planejamento
+        if(this->action)
+            this->action->act(this);
+        // Após planejar, notifica o Executor
+        this->notify();
+    }
+
+    void update() override {
         this->run();
     }
     

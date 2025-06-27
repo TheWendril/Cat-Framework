@@ -24,6 +24,8 @@ public:
 
     void start(){
         this->defaultModule.init();
+        
+        while(true){};
     }
 }; 
 

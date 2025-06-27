@@ -17,16 +17,20 @@ namespace CAT{
 class ModularComponent : public CAT::CompositeNode {
 
 private:
-
-    std::list<CAT::CompositeNode> Childrens;
+    std::list<std::shared_ptr<CAT::CompositeNode>> Childrens;
 
 public:
     void init() override{
         this->compositeNodeType = CAT::CompositeNodeType::MODULE;
+
+        for(const auto& children : this->Childrens){
+            if(children) children->init();
+        }
+
         std::cout << "ModularComponent" << std::endl;
     }
 
-    void add(CAT::CompositeNode& compositeNode){
+    void add(std::shared_ptr<CAT::CompositeNode> compositeNode){
         this->Childrens.push_back(compositeNode);
     }
 

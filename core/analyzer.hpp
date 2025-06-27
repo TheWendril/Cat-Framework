@@ -18,15 +18,19 @@ class Analyzer : public CAT::Element {
 
 public:
 
-    std::list<CAT::ConstraintModel> constraints{};
+    std::list<CAT::ConstraintModel*> constraints{};
 
-    void update(){
+    void run() {
+        this->verifyConstraints();
+    }
+
+    void update() override {
         this->run();
     }
     
     void verifyConstraints(){
-        for(CAT::ConstraintModel& constraint : this->constraints){
-            bool result = constraint.check(this->localKnowledge);
+        for(CAT::ConstraintModel* constraint : this->constraints){
+            bool result = constraint->check(this->localKnowledge);
             if(!result){
                 this->notify();
                 break;

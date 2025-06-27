@@ -9,6 +9,9 @@
 #define LOOPCOMPONENT_HPP
 
 #include <iostream>
+#include <memory>
+#include <vector>
+#include <thread>
 #include "compositeNode.hpp"
 #include "monitor.hpp"
 #include "analyzer.hpp"
@@ -26,17 +29,25 @@ protected:
     CAT::Planner planner;
     CAT::Executor executor;
 
-    void addMonitorAction(CAT::Action& action){
-        this->monitor.setAction(action);
+    void addMonitorAction(std::shared_ptr<CAT::Action> action){
+        this->monitor.setAction(*action);
+        this->monitorActionPtr = action;
     }
 
-    void addPlannerAction(CAT::Action& action){
-        this->planner.setAction(action);
+    void addPlannerAction(std::shared_ptr<CAT::Action> action){
+        this->planner.setAction(*action);
+        this->plannerActionPtr = action;
     }
 
-    void addConstraint(CAT::ConstraintModel& constraint){
-        this->analyzer.constraints.push_back(constraint);
+    void addConstraint(std::shared_ptr<CAT::ConstraintModel> constraint){
+        this->analyzer.constraints.push_back(constraint.get());
+        this->constraintPtrs.push_back(constraint);
     }
+
+private:
+    std::shared_ptr<CAT::Action> monitorActionPtr;
+    std::shared_ptr<CAT::Action> plannerActionPtr;
+    std::vector<std::shared_ptr<CAT::ConstraintModel>> constraintPtrs;
 
 public:
 
@@ -46,6 +57,12 @@ public:
         this->monitor.attach(&this->analyzer);
         this->analyzer.attach(&this->planner);
         this->planner.attach(&this->executor);
+
+        std::thread([this]() {
+            while(true) {
+                this->monitor.run();
+            }
+        }).detach();
     }
 
 }; 

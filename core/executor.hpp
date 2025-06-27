@@ -18,12 +18,18 @@ class Executor : public CAT::Element {
 public:
 
 
-    void update(){
-        std::list<CAT::Action> actions = this->localKnowledge->getNextStrategy().Actions;
-
-        for(CAT::Action& action : actions){
-            action.act();
+    void run() {
+        CAT::Strategy* strategy = this->localKnowledge->getNextStrategy();
+        if(strategy) {
+            for(const auto& action : strategy->Actions){
+                if(action) action->act(this);
+            }
         }
+    }
+
+    void update() override {
+        std::cout << "Executor" << std::endl;
+        //this->run();
     }
 
 }; 

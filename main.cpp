@@ -1,15 +1,12 @@
-#include <iostream>
-#include "teste/knowledge.hpp"
-#include "teste/model.hpp"
-
+#include "core/app.hpp"
+#include "modules/meumodulo.module.hpp"
 
 int main(){
 
-    meuModel mdl;
-    mdl.a = 10;
-    CAT::Knowledge * mkn = new CAT::Knowledge();
-    mkn->setCurrentState(mdl);
-    meuModel * mdl2 = static_cast<meuModel*>(mkn->getCurrentState());
-    std::cout << mdl2->a << std::endl;
+    MeuModulo mmdl;
+
+    CAT::App app(mmdl);
+    app.start();
     
+    return 0;
 }

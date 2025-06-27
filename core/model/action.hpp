@@ -11,10 +11,12 @@
 
 namespace CAT {
 
+class Element; // forward declaration
+
 class Action
 {
 public:
-    virtual void act() = 0;
+    virtual void act(CAT::Element* element) = 0;
     virtual ~Action() = default;
 };
 

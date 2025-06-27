@@ -13,11 +13,19 @@
 
 namespace CAT{
 
-class Monitor : public CAT::Element{
+class Monitor : public CAT::Element {
 
 public:
-    void update(){
-        std::cout << "monitoring" << std::endl;
+
+    void run() {
+        if(this->action)
+            this->action->act(this);
+        this->notify();
+    }
+
+    void update() override {
+        // O update pode ser usado para receber notificações do ciclo
+        std::cout << "Monitor recebeu update (pode re-coletar dados)" << std::endl;
     }
 
     void publishData(CAT::Model monitorData){

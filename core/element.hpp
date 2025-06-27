@@ -10,40 +10,37 @@
 
 #include <iostream>
 #include "compositeNode.hpp"
+#include "knowledge.hpp"
 
 namespace CAT{
 
+class Action; // forward declaration
+
 class Element {
-
-private:
-    CAT::Element * observer;
-    CAT::Action& action;
-
 protected:
-
+    CAT::Knowledge * localKnowledge;
+    CAT::Knowledge * moduleKnowledge;
+    CAT::Element * observer;
+    CAT::Action* action;
     void notify(){
         if (this->observer)
             this->observer->update();
     }
-
 public:
-
-    CAT::Knowledge * localKnowledge;
-    CAT::Knowledge * moduleKnowledge;
-
+    Element() : localKnowledge(nullptr), moduleKnowledge(nullptr), observer(nullptr), action(nullptr) {}
     void attach(CAT::Element* element){
         this->observer = element;
     }
-
     virtual void update() = 0;
-
     void setAction(CAT::Action& action){
-        this->action = action;
+        this->action = &action;
     }
-
     void run() {
-        this->action.act();
+        if(this->action) this->action->act(this);
+        if(this->observer) this->observer->update();
     }
+    CAT::Knowledge * getLocalKnowledge() const { return localKnowledge; }
+    void setLocalKnowledge(CAT::Knowledge *k) { localKnowledge = k; }
 }; 
 
 } 
