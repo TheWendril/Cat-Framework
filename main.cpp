@@ -3,10 +3,10 @@
 
 int main(){
 
-    DefaultModule mmdl;
-    mmdl.createModule();
+    DefaultModule defaultModule;
+    defaultModule.createModule();
     
-    CAT::App app(mmdl);
+    CAT::App app(defaultModule);
     app.start();
     
     return 0;
