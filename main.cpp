@@ -1,10 +1,11 @@
 #include "core/app.hpp"
-#include "modules/meumodulo.module.hpp"
+#include "modules/default.module.hpp"
 
 int main(){
 
-    MeuModulo mmdl;
-
+    DefaultModule mmdl;
+    mmdl.createModule();
+    
     CAT::App app(mmdl);
     app.start();
     

@@ -17,9 +17,9 @@ namespace CAT{
 class Action; // forward declaration
 
 class Element {
+    
 protected:
-    CAT::Knowledge * localKnowledge;
-    CAT::Knowledge * moduleKnowledge;
+
     CAT::Element * observer;
     CAT::Action* action;
     void notify(){
@@ -27,7 +27,14 @@ protected:
             this->observer->update();
     }
 public:
-    Element() : localKnowledge(nullptr), moduleKnowledge(nullptr), observer(nullptr), action(nullptr) {}
+
+    CAT::Knowledge * localKnowledge;
+    CAT::Knowledge * moduleKnowledge;
+
+    Element() : localKnowledge(nullptr), moduleKnowledge(nullptr), observer(nullptr), action(nullptr) {
+        this->localKnowledge = new CAT::Knowledge();
+    }
+
     void attach(CAT::Element* element){
         this->observer = element;
     }

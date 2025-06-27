@@ -16,14 +16,11 @@ namespace CAT{
 
 class CompositeNode {
 
-private:
-
-    CAT::Knowledge Knowledge;
-
 public:
 
+    CAT::Knowledge knowledge{};
     CAT::CompositeNodeType compositeNodeType;
-
+    
     virtual void init() = 0;
 }; 
 

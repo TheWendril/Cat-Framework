@@ -17,6 +17,8 @@ class Monitor : public CAT::Element {
 
 public:
 
+    Monitor() : Element() {};
+
     void run() {
         if(this->action)
             this->action->act(this);

@@ -29,6 +29,10 @@ protected:
     CAT::Planner planner;
     CAT::Executor executor;
 
+    LoopComponent() {
+        this->moduleComponent= new CAT::Knowledge();
+    }
+
     void addMonitorAction(std::shared_ptr<CAT::Action> action){
         this->monitor.setAction(*action);
         this->monitorActionPtr = action;
@@ -57,6 +61,17 @@ public:
         this->monitor.attach(&this->analyzer);
         this->analyzer.attach(&this->planner);
         this->planner.attach(&this->executor);
+
+        this->monitor.moduleKnowledge = this->moduleComponent;
+        this->analyzer.moduleKnowledge = this->moduleComponent;
+        this->planner.moduleKnowledge = this->moduleComponent;
+        this->executor.moduleKnowledge = this->moduleComponent;
+
+        this->monitor.localKnowledge = &this->knowledge;
+        this->analyzer.localKnowledge = &this->knowledge;
+        this->planner.localKnowledge = &this->knowledge;
+        this->executor.localKnowledge = &this->knowledge;
+
 
         std::thread([this]() {
             while(true) {
