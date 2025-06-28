@@ -21,8 +21,8 @@ private:
 
     CAT::Model ScopeModel;
     CAT::Strategy* NextStrategy;
-    CAT::Model* CurrentState;
-    std::list<CAT::Model> DataHistory;
+    std::shared_ptr<CAT::Model> CurrentState;
+    std::list<std::shared_ptr<CAT::Model>> DataHistory;
     int DataHistorySize = 100;
 
 public:
@@ -35,28 +35,28 @@ public:
         return this->ScopeModel;
     }
 
-    void setCurrentState(CAT::Model& model){
+    void setCurrentState(std::shared_ptr<CAT::Model> model) {
         this->DataHistory.push_front(model);
 
         if(this->DataHistory.size() > this->DataHistorySize)
             this->DataHistory.pop_back();
 
-        this->CurrentState = &model;
+        this->CurrentState = model;
     }
 
-    CAT::Model* getCurrentState(){
-        return this->CurrentState;
+    CAT::Model* getCurrentState() {
+        return this->CurrentState.get();
     }
 
-    std::list<CAT::Model> getDataHistory(){
+    std::list<std::shared_ptr<CAT::Model>> getDataHistory() {
         return this->DataHistory;
     }
 
-    void setNextStrategy(CAT::Strategy& strategy){
+    void setNextStrategy(CAT::Strategy& strategy) {
         this->NextStrategy = &strategy;
     }
 
-    CAT::Strategy* getNextStrategy(){
+    CAT::Strategy* getNextStrategy() {
         return this->NextStrategy;
     }
     

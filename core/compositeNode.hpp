@@ -12,15 +12,19 @@
 #include "knowledge.hpp"
 #include "enum/compositeNodeType.hpp"
 
-namespace CAT{
+namespace CAT {
 
 class CompositeNode {
 
 public:
 
-    CAT::Knowledge knowledge{};
+    CAT::Knowledge * knowledge;
     CAT::CompositeNodeType compositeNodeType;
     
+    CompositeNode() {
+        this->knowledge = new CAT::Knowledge();
+    }
+
     virtual void init() = 0;
 }; 
 

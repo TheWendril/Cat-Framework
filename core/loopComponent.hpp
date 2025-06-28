@@ -29,10 +29,6 @@ protected:
     CAT::Planner planner;
     CAT::Executor executor;
 
-    LoopComponent() {
-        this->moduleComponent= new CAT::Knowledge();
-    }
-
     void addMonitorAction(std::shared_ptr<CAT::Action> action){
         this->monitor.setAction(*action);
         this->monitorActionPtr = action;
@@ -55,6 +51,8 @@ private:
 
 public:
 
+    LoopComponent() : CompositeNode() {}
+
     void init() {
         this->compositeNodeType = CAT::CompositeNodeType::MAPEK;
 
@@ -67,10 +65,10 @@ public:
         this->planner.moduleKnowledge = this->moduleComponent;
         this->executor.moduleKnowledge = this->moduleComponent;
 
-        this->monitor.localKnowledge = &this->knowledge;
-        this->analyzer.localKnowledge = &this->knowledge;
-        this->planner.localKnowledge = &this->knowledge;
-        this->executor.localKnowledge = &this->knowledge;
+        this->monitor.localKnowledge = this->knowledge;
+        this->analyzer.localKnowledge = this->knowledge;
+        this->planner.localKnowledge = this->knowledge;
+        this->executor.localKnowledge = this->knowledge;
 
 
         std::thread([this]() {

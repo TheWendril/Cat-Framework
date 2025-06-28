@@ -8,9 +8,9 @@ public:
 
         std::cout << "Analisando: Analise 1" << std::endl;
 
-        //if(ventilador->temperature > 40)
-        //    return false;
+        if(ventilador->temperature > 40)
+            return false;
 
-        return false;
+        return true;
     }
 };

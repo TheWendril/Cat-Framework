@@ -17,12 +17,11 @@ public:
         std::string motorRead;
         std::getline(motor, motorRead);
 
-        Ventilador a;
-        a.power = std::stoi(motorRead);
-        a.temperature = std::stoi(sensorRead);
+        auto a = std::make_shared<Ventilador>();
+        a->power = std::stoi(motorRead);
+        a->temperature = std::stoi(sensorRead);
 
         element->getLocalKnowledge()->setCurrentState(a);
-        auto* ventilador = dynamic_cast<Ventilador*>(element->getLocalKnowledge()->getCurrentState());
 
         std::cout << "Monitorando" << std::endl;
     }

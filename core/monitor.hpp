@@ -30,7 +30,7 @@ public:
         std::cout << "Monitor recebeu update (pode re-coletar dados)" << std::endl;
     }
 
-    void publishData(CAT::Model monitorData){
+    void publishData(std::shared_ptr<CAT::Model> monitorData){
         this->localKnowledge->setCurrentState(monitorData);
     }
 }; 
