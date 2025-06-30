@@ -19,7 +19,7 @@ class StrategySet
 {
 public:
     std::list<std::shared_ptr<CAT::Action>> Actions;
-
+    
     void addAction(std::shared_ptr<CAT::Action> action){
         this->Actions.push_back(action);
     }

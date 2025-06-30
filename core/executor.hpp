@@ -19,17 +19,16 @@ public:
 
 
     void run() {
-        CAT::Strategy* strategy = this->localKnowledge->getNextStrategy();
-        if(strategy) {
-            for(const auto& action : strategy->Actions){
+        CAT::StrategySet* strategySet = this->localKnowledge->getNextStrategy();
+        if(strategySet) {
+            for(const auto& action : strategySet->Actions){
                 if(action) action->act(this);
             }
         }
     }
 
     void update() override {
-        std::cout << "Executor" << std::endl;
-        //this->run();
+        this->run();
     }
 
 }; 

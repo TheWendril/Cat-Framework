@@ -20,7 +20,7 @@ class Knowledge {
 private:
 
     CAT::Model ScopeModel;
-    CAT::Strategy* NextStrategy;
+    std::shared_ptr<CAT::StrategySet> NextStrategy;
     std::shared_ptr<CAT::Model> CurrentState;
     std::list<std::shared_ptr<CAT::Model>> DataHistory;
     int DataHistorySize = 100;
@@ -52,12 +52,12 @@ public:
         return this->DataHistory;
     }
 
-    void setNextStrategy(CAT::Strategy& strategy) {
-        this->NextStrategy = &strategy;
+    void setNextStrategy(std::shared_ptr<CAT::StrategySet> strategy) {
+        this->NextStrategy = strategy;
     }
 
-    CAT::Strategy* getNextStrategy() {
-        return this->NextStrategy;
+    CAT::StrategySet* getNextStrategy() {
+        return this->NextStrategy.get();
     }
     
 }; 

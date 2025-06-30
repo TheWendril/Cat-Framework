@@ -14,7 +14,7 @@
 
 namespace CAT{
 
-class Action; // forward declaration
+class Action;
 
 class Element {
     
@@ -22,10 +22,13 @@ protected:
 
     CAT::Element * observer;
     CAT::Action* action;
+    int timeOut = 0;
+
     void notify(){
         if (this->observer)
             this->observer->update();
     }
+
 public:
 
     CAT::Knowledge * localKnowledge;

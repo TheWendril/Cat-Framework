@@ -29,7 +29,7 @@ public:
         this->run();
     }
     
-    void publishStrategy(CAT::Strategy& strategySet){
+    void publishStrategy(std::shared_ptr<CAT::Strategy> strategySet){
         this->localKnowledge->setNextStrategy(strategySet);
         this->notify();
     }
