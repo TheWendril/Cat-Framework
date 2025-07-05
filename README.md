@@ -1,4 +1,4 @@
-# 🐾 Cat Framework
+# 🐈 Cat Framework
 
 > "Always make the simple as possible, evaluate, forward"
 
