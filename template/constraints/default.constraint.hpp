@@ -3,7 +3,7 @@
 class AConstraint : public CAT::ConstraintModel {
 public:
     bool check(CAT::Knowledge* knowledge) override {
-        std::cout << "Analyzing" << std::endl;
+        printf("Analyzing\n");
         return false;
     }
 };

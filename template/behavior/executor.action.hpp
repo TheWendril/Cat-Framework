@@ -2,7 +2,7 @@ class Action1 : public CAT::Action {
 
 public:
     void act(CAT::Element * element) override {
-        std::cout << "Action1" << std::endl;
+        printf("Action1\n");
     }
 };
 
@@ -10,6 +10,6 @@ class Action2 : public CAT::Action {
 
 public:
     void act(CAT::Element * element) override {
-        std::cout << "Action2" << std::endl;
+        printf("Action2\n");
     }
 };

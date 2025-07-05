@@ -4,6 +4,6 @@
 class PlannerAction : public CAT::Action {
 public:
     void act(CAT::Element* element) override {
-        std::cout << "Planning" << std::endl;
+        printf("Planning\n");
     }
 };

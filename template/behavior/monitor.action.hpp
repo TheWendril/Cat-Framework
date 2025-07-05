@@ -7,7 +7,7 @@ class MonitorAction : public CAT::Action {
 public:
 
     void act(CAT::Element * element) override {
-        std::cout << "Monitoring" << std::endl;
+        printf("Monitoring\n");
     }
 
 };
