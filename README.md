@@ -2,46 +2,46 @@
 
 > "Always make the simple as possible, evaluate, forward"
 
-Cat Framework é um framework C++ moderno para construção de sistemas autônomos baseados no ciclo MAPE-K (Monitor, Analyze, Plan, Execute, Knowledge). Ele oferece uma arquitetura modular, CLI poderosa e exemplos prontos para acelerar seu desenvolvimento.
+Cat Framework is a modern C++ framework for building autonomous systems based on the MAPE-K loop (Monitor, Analyze, Plan, Execute, Knowledge). It offers a modular architecture, a powerful CLI, and ready-to-use examples to accelerate your development.
 
 ---
 
-## 🚀 Instalação
+## 🚀 Installation
 
 ```bash
-# Clone o repositório
-$ git clone https://github.com/seu-usuario/cat-framework.git
+# Clone the repository
+$ git clone https://github.com/your-user/cat-framework.git
 $ cd cat-framework
 
-# Instale as dependências e o framework (requer sudo)
+# Install dependencies and the framework (requires sudo)
 $ ./install.sh
 ```
 
 ---
 
-## 🐱 Iniciando um novo projeto
+## 🐱 Starting a New Project
 
-Com a CLI instalada, crie um novo projeto com exemplos prontos:
+With the CLI installed, create a new project with ready-to-use examples:
 
 ```bash
-$ catcli init meu-projeto
-$ cd meu-projeto
+$ catcli init my-project
+$ cd my-project
 ```
 
-Isso irá gerar uma estrutura de diretórios com exemplos de cada componente do framework.
+This will generate a directory structure with examples for each framework component.
 
 ---
 
-## 🔨 Build e Execução
+## 🔨 Build and Run
 
-Compile e execute seu projeto facilmente:
+Easily build and run your project:
 
 ```bash
-$ catcli build   # Compila o projeto (gera ./dist/app)
-$ catcli run     # Compila e executa o projeto
+$ catcli build   # Builds the project (generates ./dist/app)
+$ catcli run     # Builds and runs the project
 ```
 
-Você também pode compilar manualmente:
+You can also compile manually:
 ```bash
 $ g++ -g -std=c++17 main.cpp -o app -Icore -Lbuild -lcat
 $ ./app
@@ -49,10 +49,10 @@ $ ./app
 
 ---
 
-## 📂 Estrutura de Projeto Gerada
+## 📂 Generated Project Structure
 
 ```
-meu-projeto/
+my-project/
 ├── main.cpp
 ├── behavior/
 │   ├── executor.action.hpp
@@ -72,16 +72,16 @@ meu-projeto/
 
 ---
 
-## 📖 Tutorial Básico
+## 📖 Basic Tutorial
 
-### 1. Modifique o Monitor
-Abra `behavior/monitor.action.hpp` e implemente sua lógica de monitoramento.
+### 1. Modify the Monitor
+Open `behavior/monitor.action.hpp` and implement your monitoring logic.
 
-### 2. Crie um novo Módulo
-Crie um novo arquivo em `modules/` e registre seu módulo no `main.cpp`.
+### 2. Create a New Module
+Create a new file in `modules/` and register your module in `main.cpp`.
 
-### 3. Adicione Estratégias
-Implemente estratégias em `strategy/` e vincule-as ao Planner.
+### 3. Add Strategies
+Implement strategies in `strategy/` and link them to the Planner.
 
 ### 4. Compile and Run
 ```bash
@@ -91,9 +91,9 @@ $ catcli run
 ---
 
 ## 🛠️ Advanced Concepts
-- Use smart pointers (`std::shared_ptr`) para manipular modelos e estratégias.
-- O loop MAPE-K roda em thread separada para alta performance.
-- Adicione constraints em `constraints/` para lógica de decisão customizada.
+- Use smart pointers (`std::shared_ptr`) to handle models and strategies.
+- The MAPE-K loop runs in a separate thread for high performance.
+- Add constraints in `constraints/` for custom decision logic.
 
 ---
 
@@ -106,8 +106,8 @@ $ ./uninstall.sh
 ---
 
 ## 💬 Feedback
-Fique à vontade para abrir issues ou contribuir! :3
+Feel free to open issues or contribute! :3
 
 ---
 
-**Cat Framework** © 2025 — Feito com carinho por Wendril Avila
+**Cat Framework** © 2025 — Lovingly crafted by Wendril Avila
