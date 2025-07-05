@@ -110,4 +110,4 @@ Feel free to open issues or contribute! :3
 
 ---
 
-**Cat Framework** © 2025 — Lovingly crafted by Wendril Avila
+**Cat Framework** © 2025 — Wendril Avila
