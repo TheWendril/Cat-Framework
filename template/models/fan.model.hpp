@@ -1,4 +1,4 @@
-#include "../core/model/model.hpp"
+#include <Cat/model/model.hpp>
 
 struct Ventilador : CAT::Model {
     int temperature;

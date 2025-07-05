@@ -16,20 +16,9 @@ namespace CAT{
 class Executor : public CAT::Element {
 
 public:
-
-
-    void run() {
-        CAT::StrategySet* strategySet = this->localKnowledge->getNextStrategy();
-        if(strategySet) {
-            for(const auto& action : strategySet->Actions){
-                if(action) action->act(this);
-            }
-        }
-    }
-
-    void update() override {
-        this->run();
-    }
+    Executor();
+    void run() override;
+    void update() override;
 
 }; 
 

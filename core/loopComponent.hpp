@@ -60,15 +60,15 @@ public:
         this->analyzer.attach(&this->planner);
         this->planner.attach(&this->executor);
 
-        this->monitor.moduleKnowledge = this->moduleComponent;
-        this->analyzer.moduleKnowledge = this->moduleComponent;
-        this->planner.moduleKnowledge = this->moduleComponent;
-        this->executor.moduleKnowledge = this->moduleComponent;
+        this->monitor.setModuleKnowledge(this->moduleComponent);
+        this->analyzer.setModuleKnowledge(this->moduleComponent);
+        this->planner.setModuleKnowledge(this->moduleComponent);
+        this->executor.setModuleKnowledge(this->moduleComponent);
 
-        this->monitor.localKnowledge = this->knowledge;
-        this->analyzer.localKnowledge = this->knowledge;
-        this->planner.localKnowledge = this->knowledge;
-        this->executor.localKnowledge = this->knowledge;
+        this->monitor.setLocalKnowledge(this->knowledge);
+        this->analyzer.setLocalKnowledge(this->knowledge);
+        this->planner.setLocalKnowledge(this->knowledge);
+        this->executor.setLocalKnowledge(this->knowledge);
 
 
         std::thread([this]() {

@@ -9,37 +9,20 @@
 #define ANALYZER_HPP
 
 #include <iostream>
+#include <list>
 #include "element.hpp"
 #include "constraintModel.hpp"
 
-namespace CAT{
+namespace CAT {
 
 class Analyzer : public CAT::Element {
-
 public:
-
     std::list<CAT::ConstraintModel*> constraints{};
+    void run() override;
+    void update() override;
+    void verifyConstraints();
+};
 
-    void run() {
-        this->verifyConstraints();
-    }
-
-    void update() override {
-        this->run();
-    }
-    
-    void verifyConstraints(){
-        for(CAT::ConstraintModel* constraint : this->constraints){
-            bool result = constraint->check(this->localKnowledge);
-            if(!result){
-                this->notify();
-                break;
-            }
-        }
-    }
-
-}; 
-
-} 
+}
 
 #endif

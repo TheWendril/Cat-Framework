@@ -1,4 +1,4 @@
-#include "core/app.hpp"
+#include <Cat/app.hpp>
 #include "modules/default.module.hpp"
 
 int main(){

@@ -20,37 +20,23 @@ class Element {
     
 protected:
 
+    CAT::Knowledge * localKnowledge;
+    CAT::Knowledge * moduleKnowledge;
     CAT::Element * observer;
     CAT::Action* action;
-    int timeOut = 0;
 
-    void notify(){
-        if (this->observer)
-            this->observer->update();
-    }
+    void notify();
 
 public:
 
-    CAT::Knowledge * localKnowledge;
-    CAT::Knowledge * moduleKnowledge;
-
-    Element() : localKnowledge(nullptr), moduleKnowledge(nullptr), observer(nullptr), action(nullptr) {
-        this->localKnowledge = new CAT::Knowledge();
-    }
-
-    void attach(CAT::Element* element){
-        this->observer = element;
-    }
+    Element();
+    void attach(CAT::Element* element);
     virtual void update() = 0;
-    void setAction(CAT::Action& action){
-        this->action = &action;
-    }
-    void run() {
-        if(this->action) this->action->act(this);
-        if(this->observer) this->observer->update();
-    }
-    CAT::Knowledge * getLocalKnowledge() const { return localKnowledge; }
-    void setLocalKnowledge(CAT::Knowledge *k) { localKnowledge = k; }
+    void setAction(CAT::Action& action);
+    virtual void run();
+    CAT::Knowledge * getLocalKnowledge() const;
+    void setLocalKnowledge(CAT::Knowledge *k);
+    void setModuleKnowledge(CAT::Knowledge *k);
 }; 
 
 } 

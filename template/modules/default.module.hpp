@@ -1,5 +1,5 @@
-#include "../core/module.hpp"
-#include "../mapek/meumapek.mapek.hpp"
+#include <Cat/module.hpp>
+#include "../mapek/default.mapek.hpp"
 #include <memory>
 
 class DefaultModule : public CAT::Module {

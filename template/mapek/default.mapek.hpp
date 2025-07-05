@@ -1,7 +1,7 @@
-#include "../core/mapek.hpp"
-#include "../behavior/monitorAction.hpp"
-#include "../constraint/minhaconstraint.hpp"
-#include "../behavior/plannerAction.hpp"
+#include <Cat/mapek.hpp>
+#include "../behavior/monitor.action.hpp"
+#include "../constraints/default.constraint.hpp"
+#include "../behavior/planner.action.hpp"
 
 class MMPK : public CAT::MAPEK {
 public:

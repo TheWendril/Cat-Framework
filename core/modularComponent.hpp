@@ -27,7 +27,6 @@ public:
             if(children) children->init();
         }
 
-        std::cout << "ModularComponent" << std::endl;
     }
 
     void add(std::shared_ptr<CAT::CompositeNode> compositeNode){

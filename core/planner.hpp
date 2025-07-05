@@ -16,23 +16,10 @@ namespace CAT{
 class Planner : public CAT::Element {
 
 public:
-
-    void run() {
-        // Executa a ação de planejamento
-        if(this->action)
-            this->action->act(this);
-        // Após planejar, notifica o Executor
-        this->notify();
-    }
-
-    void update() override {
-        this->run();
-    }
-    
-    void publishStrategy(std::shared_ptr<CAT::Strategy> strategySet){
-        this->localKnowledge->setNextStrategy(strategySet);
-        this->notify();
-    }
+    Planner();
+    void run() override;
+    void update() override;
+    void publishStrategy(std::shared_ptr<CAT::Strategy> strategySet);
 
 }; 
 

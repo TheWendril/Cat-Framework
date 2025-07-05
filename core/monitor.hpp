@@ -17,22 +17,13 @@ class Monitor : public CAT::Element {
 
 public:
 
-    Monitor() : Element() {};
+    Monitor();
 
-    void run() {
-        if(this->action)
-            this->action->act(this);
-        this->notify();
-    }
+    void run() override;
 
-    void update() override {
-        // O update pode ser usado para receber notificações do ciclo
-        std::cout << "Monitor recebeu update (pode re-coletar dados)" << std::endl;
-    }
+    void update() override;
 
-    void publishData(std::shared_ptr<CAT::Model> monitorData){
-        this->localKnowledge->setCurrentState(monitorData);
-    }
+    void publishData(std::shared_ptr<CAT::Model> monitorData);
 }; 
 
 } 
