@@ -79,7 +79,7 @@ void handleBuild() {
             std::cerr << "😿 Compilation ended with error..." << std::endl;
         }
     } else if (platform.rfind("esp", 0) == 0) {
-        int result = std::system("idf.py build");
+        int result = std::system("idf.py -B dist build");
         if (result == 0) {
             std::cout << "😻 ESP32 build success! Check the build output in: ./build" << std::endl;
         } else {
@@ -109,10 +109,20 @@ void handleInit(const std::string& projectName, const std::string& platform, con
 
     fs::create_directories(projectPath);
 
+    if (platform == "amd64") {
+        fs::copy_file(templatePath / "main.cpp", projectPath / "main.cpp", fs::copy_options::overwrite_existing);
+    } else if (platform.rfind("esp", 0) == 0) {
+        fs::path mainDir = projectPath / "main";
+        fs::create_directories(mainDir);
+        fs::copy_file(templatePath / "main.esp.cpp", mainDir / "main.cpp", fs::copy_options::overwrite_existing);
+    }
+
     for (const auto& entry : fs::recursive_directory_iterator(templatePath)) {
         const fs::path& from = entry.path();
         fs::path relativePath = fs::relative(from, templatePath);
         fs::path to = projectPath / relativePath;
+
+        if (relativePath == "main.cpp" || relativePath == "main.esp.cpp") continue;
 
         if (fs::is_directory(from)) {
             fs::create_directories(to);
@@ -121,21 +131,28 @@ void handleInit(const std::string& projectName, const std::string& platform, con
         }
     }
 
-    // Gera o arquivo de configuração
     std::ofstream configFile(projectPath / "cat.config.txt");
     configFile << "project_name=" << projectName << std::endl;
     configFile << "platform=" << platform << std::endl;
     configFile << "debug=" << debug << std::endl;
     configFile.close();
 
-    // Se for plataforma ESP, gera CMakeLists.txt raiz e main/
     if (platform.rfind("esp", 0) == 0) {
-        // CMakeLists.txt na raiz
+
         std::ofstream cmakeRoot(projectPath / "CMakeLists.txt");
         cmakeRoot << "cmake_minimum_required(VERSION 3.5)\n";
+        cmakeRoot << "set(EXTRA_COMPONENT_DIRS ${CMAKE_SOURCE_DIR})\n";
         cmakeRoot << "include($ENV{IDF_PATH}/tools/cmake/project.cmake)\n";
         cmakeRoot << "project(" << projectName << ")\n";
         cmakeRoot.close();
+
+        fs::path mainDir = projectPath / "main";
+        fs::create_directories(mainDir);
+        std::ofstream cmakeMain(mainDir / "CMakeLists.txt");
+        cmakeMain << "idf_component_register(SRCS \"main.cpp\" INCLUDE_DIRS \"\")\n";
+        cmakeMain << "include_directories(/usr/local/include)\n";
+        cmakeMain << "target_link_libraries(${COMPONENT_LIB} /usr/local/lib/libcat.a)\n";
+        cmakeMain.close();
     }
 
     std::this_thread::sleep_for(std::chrono::seconds(1));
@@ -153,8 +170,45 @@ void handleRun() {
         std::string runCmd = "./dist/" + projectName;
         std::system(runCmd.c_str());
     } else if (platform.rfind("esp", 0) == 0) {
-        std::cout << "🔌 To flash and monitor your ESP32, run:\n";
-        std::cout << "    idf.py -p <PORT> flash monitor\n";
+
+        std::string debug = "false";
+        std::ifstream configFile("cat.config.txt");
+        std::string line;
+        while (std::getline(configFile, line)) {
+            if (line.rfind("debug=", 0) == 0) {
+                debug = line.substr(6);
+                break;
+            }
+        }
+        std::string port;
+        FILE* pipe = popen("ls /dev/ttyUSB* /dev/ttyACM* 2>/dev/null | head -n 1", "r");
+        if (pipe) {
+            char buffer[256];
+            if (fgets(buffer, sizeof(buffer), pipe)) {
+                port = std::string(buffer);
+                size_t pos = port.find('\n');
+                if (pos != std::string::npos) port.erase(pos);
+            }
+            pclose(pipe);
+        }
+        if (port.empty()) {
+            std::cerr << "❌ No ESP32 board detected (no /dev/ttyUSB* or /dev/ttyACM* found). Connect your board and try again." << std::endl;
+            return;
+        }
+        std::cout << "🔌 Flashing your ESP32 on port: " << port << std::endl;
+        std::ostringstream cmd;
+        cmd << "idf.py -p " << port << " flash";
+        int flashResult = std::system(cmd.str().c_str());
+        if (flashResult == 0 && debug == "true") {
+            std::cout << "🪲 Debug enabled. Opening monitor..." << std::endl;
+            std::ostringstream monitorCmd;
+            monitorCmd << "idf.py -p " << port << " monitor";
+            std::system(monitorCmd.str().c_str());
+        } else if (flashResult == 0) {
+            std::cout << "✅ Flash complete! (monitor not started, debug=false)" << std::endl;
+        } else {
+            std::cerr << "😿 Flash failed..." << std::endl;
+        }
     } else {
         std::cerr << "❌ Unknown platform: " << platform << std::endl;
     }
@@ -170,7 +224,6 @@ int main(int argc, char* argv[]) {
     std::string platform = "amd64";
     std::string debug = "false";
 
-    // Parse flags for init only
     for (int i = 2; i < argc; ++i) {
         std::string arg = argv[i];
         if (arg == "--platform" && i + 1 < argc) {
