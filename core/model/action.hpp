@@ -11,7 +11,7 @@
 
 namespace CAT {
 
-class Element; // forward declaration
+class Element; 
 
 class Action
 {
