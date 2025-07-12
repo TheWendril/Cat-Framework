@@ -1,6 +1,13 @@
 #!/bin/bash
 
-#[ "$EUID" -ne 0 ] && exec sudo "$0" "$@"
+if [ "$EUID" -eq 0 ]; then
+  echo "❌ Não execute este script como root diretamente."
+  echo "Use: ./install-esp.sh (sem sudo)"
+  exit 1
+fi
+
+. "$HOME/esp/esp-idf/export.sh"
+export PATH="$(dirname "$(which xtensa-esp32-elf-g++)"):$PATH"
 
 PROJECT_NAME="cat"
 LIB_NAME="lib${PROJECT_NAME}.a"
@@ -17,8 +24,8 @@ TEMPLATE_INSTALL_DIR="/usr/share/catframework/template"
 XTENSA_PREFIX="xtensa-esp32-elf-"
 CXXFLAGS_XTENSA="-std=c++17 -O2 -mlongcalls -Wno-frame-address -nostartfiles"
 
-sudo rm -rf "$BUILD_DIR" "$BUILD_DIR_CLI"
-sudo mkdir -p "$BUILD_DIR" "$BUILD_DIR_CLI"
+rm -rf "$BUILD_DIR" "$BUILD_DIR_CLI"
+mkdir -p "$BUILD_DIR" "$BUILD_DIR_CLI"
 
 echo "Compiling static library for Xtensa (ESP32)..."
 find ./core -name '*.cpp' | while read -r file; do
@@ -42,7 +49,7 @@ g++ cli/catcli.cpp -o "$BUILD_DIR_CLI/$CLI_NAME" -std=c++17 -O2 -Icore -L"$BUILD
 echo "Installing template files in $TEMPLATE_INSTALL_DIR..."
 sudo rm -rf "$TEMPLATE_INSTALL_DIR"
 sudo mkdir -p "$TEMPLATE_INSTALL_DIR"
-cp -r "$TEMPLATE_SOURCE_DIR"/* "$TEMPLATE_INSTALL_DIR"
+sudo cp -r "$TEMPLATE_SOURCE_DIR"/* "$TEMPLATE_INSTALL_DIR"
 
 echo "Installing CLI binary in $INSTALL_BIN_DIR..."
 sudo cp "$BUILD_DIR_CLI/$CLI_NAME" "$INSTALL_BIN_DIR"
