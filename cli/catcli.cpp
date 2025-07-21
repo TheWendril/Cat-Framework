@@ -79,9 +79,18 @@ void handleBuild() {
             std::cerr << "😿 Compilation ended with error..." << std::endl;
         }
     } else if (platform.rfind("esp", 0) == 0) {
+        
+        std::system(". ~/esp/esp-idf/export.sh");
+        std::system("python -m pip install pyyaml");
+        setenv("IDF_TARGET", platform.c_str(), 1);
+        
+        std::ostringstream cmd;
+        cmd << "idf.py set-target " << platform;
+        std::system(cmd.str().c_str());
+
         int result = std::system("idf.py -B dist build");
         if (result == 0) {
-            std::cout << "😻 ESP32 build success! Check the build output in: ./build" << std::endl;
+            std::cout << "😻 ESP32 build success! Check the build output in: ./dist" << std::endl;
         } else {
             std::cerr << "😿 ESP32 build failed..." << std::endl;
         }
@@ -141,7 +150,8 @@ void handleInit(const std::string& projectName, const std::string& platform, con
 
         std::ofstream cmakeRoot(projectPath / "CMakeLists.txt");
         cmakeRoot << "cmake_minimum_required(VERSION 3.5)\n";
-        cmakeRoot << "set(EXTRA_COMPONENT_DIRS ${CMAKE_SOURCE_DIR})\n";
+        cmakeRoot << "set(EXTRA_COMPONENT_DIRS main)\n";
+        cmakeRoot << "set(CXX_FLAGS \"${CXX_FLAGS} -frtti -fexceptions\")\n";
         cmakeRoot << "include($ENV{IDF_PATH}/tools/cmake/project.cmake)\n";
         cmakeRoot << "project(" << projectName << ")\n";
         cmakeRoot.close();
@@ -149,9 +159,10 @@ void handleInit(const std::string& projectName, const std::string& platform, con
         fs::path mainDir = projectPath / "main";
         fs::create_directories(mainDir);
         std::ofstream cmakeMain(mainDir / "CMakeLists.txt");
-        cmakeMain << "idf_component_register(SRCS \"main.cpp\" INCLUDE_DIRS \"\")\n";
-        cmakeMain << "include_directories(/usr/local/include)\n";
-        cmakeMain << "target_link_libraries(${COMPONENT_LIB} /usr/local/lib/libcat.a)\n";
+        cmakeMain << "idf_component_register(SRCS \"main.cpp\" \"/opt/catframework/esp32/include/Cat/loopComponent.cpp\" INCLUDE_DIRS \".\")\n";
+        cmakeMain << "include_directories(/opt/catframework/esp32/include)\n";
+        cmakeMain << "target_link_libraries(${COMPONENT_LIB} INTERFACE /opt/catframework/esp32/lib/libcat.a)\n";
+        cmakeMain << "target_compile_definitions(${COMPONENT_LIB} PRIVATE ESP_PLATFORM)\n";
         cmakeMain.close();
     }
 
@@ -197,7 +208,7 @@ void handleRun() {
         }
         std::cout << "🔌 Flashing your ESP32 on port: " << port << std::endl;
         std::ostringstream cmd;
-        cmd << "idf.py -p " << port << " flash";
+        cmd << "idf.py -p " << port << " --build-dir=dist flash";
         int flashResult = std::system(cmd.str().c_str());
         if (flashResult == 0 && debug == "true") {
             std::cout << "🪲 Debug enabled. Opening monitor..." << std::endl;

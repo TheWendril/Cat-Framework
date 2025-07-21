@@ -10,12 +10,17 @@ INSTALL_BIN_DIR="/usr/bin"
 CLI_NAME="catcli"
 TEMPLATE_INSTALL_DIR="/usr/share/catframework/template"
 TEMPLATE_ROOT_DIR="/usr/share/catframework"
+INSTALL_LIB_DIR_ESP="/opt/catframework/esp32/lib"
+INSTALL_INCLUDE_DIR_ESP="/opt/catframework/esp32/Cat/include"
 
 echo "🧹 Removing library..."
 rm -f "$INSTALL_LIB_DIR/$LIB_NAME"
+rm -f "$INSTALL_LIB_DIR_ESP/$LIB_NAME"
 
 echo "🧹 Removing headers..."
 rm -rf "$INSTALL_INCLUDE_DIR"
+rm -rf "$INSTALL_INCLUDE_DIR_ESP"
+rm -rf /opt/catframework
 
 echo "🧹 Removing CLI..."
 rm -f "$INSTALL_BIN_DIR/$CLI_NAME"

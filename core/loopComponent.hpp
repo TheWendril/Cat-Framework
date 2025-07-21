@@ -24,7 +24,6 @@ class LoopComponent : public CAT::CompositeNode {
 
 protected:
     CAT::Knowledge * moduleComponent;
-    CAT::Monitor monitor;
     CAT::Analyzer analyzer;
     CAT::Planner planner;
     CAT::Executor executor;
@@ -35,6 +34,8 @@ private:
     std::vector<std::shared_ptr<CAT::ConstraintModel>> constraintPtrs;
 
 public:
+    CAT::Monitor monitor;
+
     LoopComponent();
     void init();
     void addMonitorAction(std::shared_ptr<CAT::Action> action);

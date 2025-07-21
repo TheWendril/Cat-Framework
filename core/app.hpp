@@ -20,13 +20,8 @@ public:
 
     CAT::Module& defaultModule;
 
-    App(CAT::Module& newModule) : defaultModule(newModule){}
-
-    void start(){
-        this->defaultModule.init();
-        
-        while(true){};
-    }
+    App(CAT::Module& newModule);
+    void start();
 }; 
 
 } 

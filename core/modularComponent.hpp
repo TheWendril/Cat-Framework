@@ -20,19 +20,10 @@ private:
     std::list<std::shared_ptr<CAT::CompositeNode>> Childrens;
 
 public:
-    void init() override{
-        this->compositeNodeType = CAT::CompositeNodeType::MODULE;
-
-        for(const auto& children : this->Childrens){
-            if(children) children->init();
-        }
-
-    }
-
-    void add(std::shared_ptr<CAT::CompositeNode> compositeNode){
-        this->Childrens.push_back(compositeNode);
-    }
-
+    ModularComponent();
+    virtual ~ModularComponent();
+    void init() override;
+    void add(std::shared_ptr<CAT::CompositeNode> compositeNode);
     virtual void createModule() = 0;
 }; 
 
