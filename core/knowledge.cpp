@@ -17,7 +17,7 @@ void Knowledge::setCurrentState(std::shared_ptr<CAT::Model> model) {
     this->CurrentState = model;
 }
 
-CAT::Model* Knowledge::getCurrentState() {
+std::shared_ptr<CAT::Model> Knowledge::getCurrentState() {
     return this->CurrentState.get();
 }
 
