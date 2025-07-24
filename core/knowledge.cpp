@@ -18,7 +18,7 @@ void Knowledge::setCurrentState(std::shared_ptr<CAT::Model> model) {
 }
 
 std::shared_ptr<CAT::Model> Knowledge::getCurrentState() {
-    return this->CurrentState.get();
+    return this->CurrentState;
 }
 
 std::list<std::shared_ptr<CAT::Model>> Knowledge::getDataHistory() {
