@@ -2,7 +2,7 @@
 
 /*
     Main file for Cat CLI 
-    "Always make the simple as possible, evaluate, forward"
+    "Simplify. Evaluate. Move forward."
 */
 
 #include <iostream>
@@ -20,7 +20,7 @@ namespace fs = std::filesystem;
 void printLogo() {
     std::cout << R"(
   /\_/\   Cat Framework CLI
- ( o.o )  "Always make the simple as possible, evaluate, forward"
+ ( o.o )  "Simplify. Evaluate. Move forward."
 <  ^ ^ 
 -------------------------------------------------------------
 )" << std::endl;

@@ -2,7 +2,7 @@
 
 /*
     Main header for Cat Framework
-    "Always make the simple as possible, evaluate, forward"
+    "Simplify. Evaluate. Move forward."
 */
 
 #ifndef COMPOSITENODE_HPP

@@ -1,6 +1,6 @@
 # 🐈 Cat Framework
 
-> "Always make the simple as possible, evaluate, forward"
+> "Simplify. Evaluate. Move forward."
 
 Cat Framework is a modern C++ framework for building autonomous systems based on the MAPE-K loop (Monitor, Analyze, Plan, Execute, Knowledge). It offers a modular architecture, a powerful CLI, and ready-to-use examples to accelerate your development.
 
