@@ -164,6 +164,12 @@ void handleInit(const std::string& projectName, const std::string& platform, con
         cmakeMain << "target_link_libraries(${COMPONENT_LIB} INTERFACE /opt/catframework/esp32/lib/libcat.a)\n";
         cmakeMain << "target_compile_definitions(${COMPONENT_LIB} PRIVATE ESP_PLATFORM)\n";
         cmakeMain.close();
+
+        std::ofstream sdkconfig(projectPath / "sdkconfig.defaults");
+        sdkconfig << "CONFIG_ESP_CONSOLE_USB_CDC=y\n";
+        sdkconfig << "CONFIG_USB_CDC_ENABLED=y\n";
+        sdkconfig << "CONFIG_ESP_CONSOLE_STDOUT_USB_CDC=y\n";
+        sdkconfig.close();
     }
 
     std::this_thread::sleep_for(std::chrono::seconds(1));
