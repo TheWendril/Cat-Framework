@@ -20,7 +20,7 @@ namespace CAT {
 class Knowledge {
 private:
     CAT::Model ScopeModel;
-    CAT::Strategy* NextStrategy;
+    std::shared_ptr<CAT::Strategy> NextStrategy;
     std::shared_ptr<CAT::Model> CurrentState;
     std::list<std::shared_ptr<CAT::Model>> DataHistory;
     int DataHistorySize = 100;
@@ -31,7 +31,7 @@ public:
     CAT::Model* getCurrentState();
     std::list<std::shared_ptr<CAT::Model>> getDataHistory();
     void setNextStrategy(std::shared_ptr<CAT::Strategy> strategy);
-    CAT::Strategy* getNextStrategy();
+    std::shared_ptr<CAT::Strategy> getNextStrategy();
 };
 
 }

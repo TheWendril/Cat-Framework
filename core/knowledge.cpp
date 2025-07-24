@@ -26,10 +26,10 @@ std::list<std::shared_ptr<CAT::Model>> Knowledge::getDataHistory() {
 }
 
 void Knowledge::setNextStrategy(std::shared_ptr<CAT::Strategy> strategy) {
-    this->NextStrategy = strategy.get();
+    this->NextStrategy = strategy;
 }
 
-CAT::Strategy* Knowledge::getNextStrategy() {
+std::shared_ptr<CAT::Strategy> Knowledge::getNextStrategy() {
     return this->NextStrategy;
 }
 

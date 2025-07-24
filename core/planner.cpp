@@ -16,7 +16,6 @@ void Planner::update() {
 
 void Planner::publishStrategy(std::shared_ptr<CAT::Strategy> strategySet) {
     this->localKnowledge->setNextStrategy(strategySet);
-    this->notify();
 }
 
 }

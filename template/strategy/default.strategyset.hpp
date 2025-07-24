@@ -3,11 +3,11 @@
 #include <fstream>
 #include "../behavior/executor.action.hpp"
 
-class MyStrategySet : public CAT::StrategySet {
+class DefaultStrategy : public CAT::Strategy {
 
 public: 
 
-    void create() {
+    void create() override {
         auto action1 = std::make_shared<Action1>();
         auto action2 = std::make_shared<Action2>();
         

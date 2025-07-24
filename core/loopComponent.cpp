@@ -11,9 +11,8 @@ namespace CAT {
 static void loop_task(void* pvParameter) {
     CAT::LoopComponent* self = static_cast<CAT::LoopComponent*>(pvParameter);
     while (true) {
-        printf("ESP LOOP\n");
         self->monitor.run();
-        vTaskDelay(1); 
+        vTaskDelay(1); // Small delay for FreeRTOS
     }
 }
 #endif
@@ -52,6 +51,7 @@ void LoopComponent::init() {
     this->executor.setLocalKnowledge(this->knowledge);
 
 #ifdef ESP_PLATFORM
+    // ESP32: Use FreeRTOS task
     xTaskCreate(loop_task, "loop_task", 4096, this, 1, nullptr);
 #else
     std::thread([this]() {
@@ -62,4 +62,4 @@ void LoopComponent::init() {
 #endif
 }
 
-}
+} // namespace CAT

@@ -217,6 +217,7 @@ void handleRun() {
         cmd << "idf.py -p " << port << " --build-dir=dist flash";
         int flashResult = std::system(cmd.str().c_str());
         if (flashResult == 0 && debug == "true") {
+            std::this_thread::sleep_for(std::chrono::seconds(3));
             std::cout << "🪲 Debug enabled. Opening monitor..." << std::endl;
             std::ostringstream monitorCmd;
             monitorCmd << "idf.py -p " << port << " monitor";
