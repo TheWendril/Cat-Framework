@@ -1,0 +1,184 @@
+\doxysection{CAT\+::Element Class Reference}
+\hypertarget{classCAT_1_1Element}{}\label{classCAT_1_1Element}\index{CAT::Element@{CAT::Element}}
+
+
+{\ttfamily \#include $<$element.\+hpp$>$}
+
+
+
+Inheritance diagram for CAT\+::Element\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCAT_1_1Element__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for CAT\+::Element\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{classCAT_1_1Element__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCAT_1_1Element_aaa7a8bafebed79ed774878cc3c3c9d47}{Element}} ()
+\item 
+void \mbox{\hyperlink{classCAT_1_1Element_aa0ed1c205cbcdb9ea59aee7998725f75}{attach}} (\mbox{\hyperlink{classCAT_1_1Element}{CAT\+::\+Element}} \texorpdfstring{$\ast$}{*}element)
+\item 
+virtual void \mbox{\hyperlink{classCAT_1_1Element_a14771a4e3e9fe70684f6bf1d376225b0}{update}} ()=0
+\item 
+void \mbox{\hyperlink{classCAT_1_1Element_a0002b0b4df88a4bffb50dca0d65d63e5}{set\+Action}} (CAT\+::\+Action \&\mbox{\hyperlink{classCAT_1_1Element_ac43849e75d53c7a70bb37eefa9f1b775}{action}})
+\item 
+virtual void \mbox{\hyperlink{classCAT_1_1Element_af6dadc3641a04de34f2c79db9a0b8bc5}{run}} ()
+\item 
+\mbox{\hyperlink{classCAT_1_1Knowledge}{CAT\+::\+Knowledge}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classCAT_1_1Element_a34f64884912d14aa5b30a27e6f4f50b9}{get\+Local\+Knowledge}} () const
+\item 
+void \mbox{\hyperlink{classCAT_1_1Element_a848eee322b7d5f41369849326cc62dad}{set\+Local\+Knowledge}} (\mbox{\hyperlink{classCAT_1_1Knowledge}{CAT\+::\+Knowledge}} \texorpdfstring{$\ast$}{*}k)
+\item 
+void \mbox{\hyperlink{classCAT_1_1Element_a857a86748aed114e9eb36a0275511e59}{set\+Module\+Knowledge}} (\mbox{\hyperlink{classCAT_1_1Knowledge}{CAT\+::\+Knowledge}} \texorpdfstring{$\ast$}{*}k)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classCAT_1_1Element_ab5dbde2570c07bb973f812ba163860d7}{notify}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCAT_1_1Knowledge}{CAT\+::\+Knowledge}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classCAT_1_1Element_a6f30e866388f16a8f0a964a2789d9c24}{local\+Knowledge}}
+\item 
+\mbox{\hyperlink{classCAT_1_1Knowledge}{CAT\+::\+Knowledge}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classCAT_1_1Element_aaf5cd162f740d92f6e29cade009c5657}{module\+Knowledge}}
+\item 
+\mbox{\hyperlink{classCAT_1_1Element}{CAT\+::\+Element}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classCAT_1_1Element_a0e44038db4c0c4aa39a488d6cf402252}{observer}}
+\item 
+CAT\+::\+Action \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classCAT_1_1Element_ac43849e75d53c7a70bb37eefa9f1b775}{action}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{classCAT_1_1Element_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classCAT_1_1Element_aaa7a8bafebed79ed774878cc3c3c9d47}\index{CAT::Element@{CAT::Element}!Element@{Element}}
+\index{Element@{Element}!CAT::Element@{CAT::Element}}
+\doxysubsubsection{\texorpdfstring{Element()}{Element()}}
+{\footnotesize\ttfamily \label{classCAT_1_1Element_aaa7a8bafebed79ed774878cc3c3c9d47} 
+CAT\+::\+Element\+::\+Element (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCAT_1_1Element_aaa7a8bafebed79ed774878cc3c3c9d47_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-func-members}
+\Hypertarget{classCAT_1_1Element_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classCAT_1_1Element_aa0ed1c205cbcdb9ea59aee7998725f75}\index{CAT::Element@{CAT::Element}!attach@{attach}}
+\index{attach@{attach}!CAT::Element@{CAT::Element}}
+\doxysubsubsection{\texorpdfstring{attach()}{attach()}}
+{\footnotesize\ttfamily \label{classCAT_1_1Element_aa0ed1c205cbcdb9ea59aee7998725f75} 
+void CAT\+::\+Element\+::attach (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCAT_1_1Element}{CAT\+::\+Element}} \texorpdfstring{$\ast$}{*}}]{element}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classCAT_1_1Element_a34f64884912d14aa5b30a27e6f4f50b9}\index{CAT::Element@{CAT::Element}!getLocalKnowledge@{getLocalKnowledge}}
+\index{getLocalKnowledge@{getLocalKnowledge}!CAT::Element@{CAT::Element}}
+\doxysubsubsection{\texorpdfstring{getLocalKnowledge()}{getLocalKnowledge()}}
+{\footnotesize\ttfamily \label{classCAT_1_1Element_a34f64884912d14aa5b30a27e6f4f50b9} 
+\mbox{\hyperlink{classCAT_1_1Knowledge}{CAT\+::\+Knowledge}} \texorpdfstring{$\ast$}{*} CAT\+::\+Element\+::get\+Local\+Knowledge (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{classCAT_1_1Element_ab5dbde2570c07bb973f812ba163860d7}\index{CAT::Element@{CAT::Element}!notify@{notify}}
+\index{notify@{notify}!CAT::Element@{CAT::Element}}
+\doxysubsubsection{\texorpdfstring{notify()}{notify()}}
+{\footnotesize\ttfamily \label{classCAT_1_1Element_ab5dbde2570c07bb973f812ba163860d7} 
+void CAT\+::\+Element\+::notify (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCAT_1_1Element_ab5dbde2570c07bb973f812ba163860d7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classCAT_1_1Element_af6dadc3641a04de34f2c79db9a0b8bc5}\index{CAT::Element@{CAT::Element}!run@{run}}
+\index{run@{run}!CAT::Element@{CAT::Element}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily \label{classCAT_1_1Element_af6dadc3641a04de34f2c79db9a0b8bc5} 
+void CAT\+::\+Element\+::run (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classCAT_1_1Analyzer_ab65c9a961c0003710774c7fe0da400dc}{CAT\+::\+Analyzer}}, \mbox{\hyperlink{classCAT_1_1Executor_a38d735fbf88d08454a49cbf9adaa2d59}{CAT\+::\+Executor}}, \mbox{\hyperlink{classCAT_1_1Monitor_a6d4755004618b34ae3117237c8490f5a}{CAT\+::\+Monitor}}, and \mbox{\hyperlink{classCAT_1_1Planner_aa6153eb818b576a3f2ac80f661234efd}{CAT\+::\+Planner}}.
+
+\Hypertarget{classCAT_1_1Element_a0002b0b4df88a4bffb50dca0d65d63e5}\index{CAT::Element@{CAT::Element}!setAction@{setAction}}
+\index{setAction@{setAction}!CAT::Element@{CAT::Element}}
+\doxysubsubsection{\texorpdfstring{setAction()}{setAction()}}
+{\footnotesize\ttfamily \label{classCAT_1_1Element_a0002b0b4df88a4bffb50dca0d65d63e5} 
+void CAT\+::\+Element\+::set\+Action (\begin{DoxyParamCaption}\item[{CAT\+::\+Action \&}]{action}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classCAT_1_1Element_a848eee322b7d5f41369849326cc62dad}\index{CAT::Element@{CAT::Element}!setLocalKnowledge@{setLocalKnowledge}}
+\index{setLocalKnowledge@{setLocalKnowledge}!CAT::Element@{CAT::Element}}
+\doxysubsubsection{\texorpdfstring{setLocalKnowledge()}{setLocalKnowledge()}}
+{\footnotesize\ttfamily \label{classCAT_1_1Element_a848eee322b7d5f41369849326cc62dad} 
+void CAT\+::\+Element\+::set\+Local\+Knowledge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCAT_1_1Knowledge}{CAT\+::\+Knowledge}} \texorpdfstring{$\ast$}{*}}]{k}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classCAT_1_1Element_a857a86748aed114e9eb36a0275511e59}\index{CAT::Element@{CAT::Element}!setModuleKnowledge@{setModuleKnowledge}}
+\index{setModuleKnowledge@{setModuleKnowledge}!CAT::Element@{CAT::Element}}
+\doxysubsubsection{\texorpdfstring{setModuleKnowledge()}{setModuleKnowledge()}}
+{\footnotesize\ttfamily \label{classCAT_1_1Element_a857a86748aed114e9eb36a0275511e59} 
+void CAT\+::\+Element\+::set\+Module\+Knowledge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCAT_1_1Knowledge}{CAT\+::\+Knowledge}} \texorpdfstring{$\ast$}{*}}]{k}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classCAT_1_1Element_a14771a4e3e9fe70684f6bf1d376225b0}\index{CAT::Element@{CAT::Element}!update@{update}}
+\index{update@{update}!CAT::Element@{CAT::Element}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{classCAT_1_1Element_a14771a4e3e9fe70684f6bf1d376225b0} 
+virtual void CAT\+::\+Element\+::update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classCAT_1_1Analyzer_a250843ae34626605db631f542eccdbdf}{CAT\+::\+Analyzer}}, \mbox{\hyperlink{classCAT_1_1Executor_a6e97a67fb5943b51ceab1db9f70d5785}{CAT\+::\+Executor}}, \mbox{\hyperlink{classCAT_1_1Monitor_a9e61d851c4322b278f52e308edf5d04a}{CAT\+::\+Monitor}}, and \mbox{\hyperlink{classCAT_1_1Planner_a8bfb6e967cd4a5d5211309b5679e66aa}{CAT\+::\+Planner}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{classCAT_1_1Element_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classCAT_1_1Element_ac43849e75d53c7a70bb37eefa9f1b775}\index{CAT::Element@{CAT::Element}!action@{action}}
+\index{action@{action}!CAT::Element@{CAT::Element}}
+\doxysubsubsection{\texorpdfstring{action}{action}}
+{\footnotesize\ttfamily \label{classCAT_1_1Element_ac43849e75d53c7a70bb37eefa9f1b775} 
+CAT\+::\+Action\texorpdfstring{$\ast$}{*} CAT\+::\+Element\+::action\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classCAT_1_1Element_a6f30e866388f16a8f0a964a2789d9c24}\index{CAT::Element@{CAT::Element}!localKnowledge@{localKnowledge}}
+\index{localKnowledge@{localKnowledge}!CAT::Element@{CAT::Element}}
+\doxysubsubsection{\texorpdfstring{localKnowledge}{localKnowledge}}
+{\footnotesize\ttfamily \label{classCAT_1_1Element_a6f30e866388f16a8f0a964a2789d9c24} 
+\mbox{\hyperlink{classCAT_1_1Knowledge}{CAT\+::\+Knowledge}}\texorpdfstring{$\ast$}{*} CAT\+::\+Element\+::local\+Knowledge\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classCAT_1_1Element_aaf5cd162f740d92f6e29cade009c5657}\index{CAT::Element@{CAT::Element}!moduleKnowledge@{moduleKnowledge}}
+\index{moduleKnowledge@{moduleKnowledge}!CAT::Element@{CAT::Element}}
+\doxysubsubsection{\texorpdfstring{moduleKnowledge}{moduleKnowledge}}
+{\footnotesize\ttfamily \label{classCAT_1_1Element_aaf5cd162f740d92f6e29cade009c5657} 
+\mbox{\hyperlink{classCAT_1_1Knowledge}{CAT\+::\+Knowledge}}\texorpdfstring{$\ast$}{*} CAT\+::\+Element\+::module\+Knowledge\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classCAT_1_1Element_a0e44038db4c0c4aa39a488d6cf402252}\index{CAT::Element@{CAT::Element}!observer@{observer}}
+\index{observer@{observer}!CAT::Element@{CAT::Element}}
+\doxysubsubsection{\texorpdfstring{observer}{observer}}
+{\footnotesize\ttfamily \label{classCAT_1_1Element_a0e44038db4c0c4aa39a488d6cf402252} 
+\mbox{\hyperlink{classCAT_1_1Element}{CAT\+::\+Element}}\texorpdfstring{$\ast$}{*} CAT\+::\+Element\+::observer\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+core/\mbox{\hyperlink{element_8hpp}{element.\+hpp}}\item 
+core/\mbox{\hyperlink{element_8cpp}{element.\+cpp}}\end{DoxyCompactItemize}

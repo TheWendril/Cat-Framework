@@ -1,0 +1,15 @@
+<map id="core/knowledge.cpp" name="core/knowledge.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="128,5,266,32"/>
+<area shape="rect" id="Node000002" href="$knowledge_8hpp.html" title=" " alt="" coords="143,80,251,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="200,33,200,64,194,64,194,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,155,77,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="171,110,83,150,81,145,169,105"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="100,155,139,181"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="185,109,146,146,142,142,182,105"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="163,155,231,181"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="200,107,200,139,194,139,194,107"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="256,155,376,181"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="219,105,283,144,281,149,216,109"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="399,155,531,181"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="244,105,404,148,403,153,243,110"/>
+</map>

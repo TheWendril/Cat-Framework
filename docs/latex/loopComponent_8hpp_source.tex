@@ -1,0 +1,55 @@
+\doxysection{loop\+Component.\+hpp}
+\hypertarget{loopComponent_8hpp_source}{}\label{loopComponent_8hpp_source}\index{core/loopComponent.hpp@{core/loopComponent.hpp}}
+\mbox{\hyperlink{loopComponent_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ written\ by\ Wendril\ Avila}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ \ \ \ Main\ header\ for\ Cat\ Framework}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ \ \ \ "{}Simplify.\ Evaluate.\ Move\ forward."{}}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ LOOPCOMPONENT\_HPP}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ LOOPCOMPONENT\_HPP}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <thread>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{compositeNode_8hpp}{compositeNode.hpp}}"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{monitor_8hpp}{monitor.hpp}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{analyzer_8hpp}{analyzer.hpp}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{planner_8hpp}{planner.hpp}}"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{executor_8hpp}{executor.hpp}}"{}}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceCAT}{CAT}}\{}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCAT_1_1LoopComponent_a2433da7878e4dd846947e6869f785b3c}{LoopComponent}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classCAT_1_1CompositeNode}{CAT::CompositeNode}}\ \{}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{classCAT_1_1Knowledge}{CAT::Knowledge}}\ *\ \mbox{\hyperlink{classCAT_1_1LoopComponent_ae9f7f908610570a17ad90774dc56cc26}{moduleComponent}};}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{classCAT_1_1Analyzer}{CAT::Analyzer}}\ \mbox{\hyperlink{classCAT_1_1LoopComponent_aebad689d439094a39319aebb49ca14f7}{analyzer}};}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{classCAT_1_1Planner}{CAT::Planner}}\ \mbox{\hyperlink{classCAT_1_1LoopComponent_a67bbbc4fcde0bb006811674d6972837e}{planner}};}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{classCAT_1_1Executor}{CAT::Executor}}\ \mbox{\hyperlink{classCAT_1_1LoopComponent_a25655d0d529fa4c73516706b112f294a}{executor}};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00032\ \ \ \ \ std::shared\_ptr<CAT::Action>\ monitorActionPtr;}
+\DoxyCodeLine{00033\ \ \ \ \ std::shared\_ptr<CAT::Action>\ plannerActionPtr;}
+\DoxyCodeLine{00034\ \ \ \ \ std::vector<std::shared\_ptr<CAT::ConstraintModel>>\ constraintPtrs;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{classCAT_1_1Monitor}{CAT::Monitor}}\ \mbox{\hyperlink{classCAT_1_1LoopComponent_a909969bfbbcdefb61c9f908d1fc47455}{monitor}};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{classCAT_1_1LoopComponent_a2433da7878e4dd846947e6869f785b3c}{LoopComponent}}();}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCAT_1_1LoopComponent_a739caa29c09b9b05f067c2552c831ff5}{init}}();}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCAT_1_1LoopComponent_aa9acc1e02cdda86cfe77136c54f9e876}{addMonitorAction}}(std::shared\_ptr<CAT::Action>\ action);}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCAT_1_1LoopComponent_a63411a1a556e1397137464ae1470a08e}{addPlannerAction}}(std::shared\_ptr<CAT::Action>\ action);}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCAT_1_1LoopComponent_ae4093df829127007796a712d1f9d7081}{addConstraint}}(std::shared\_ptr<CAT::ConstraintModel>\ constraint);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \};\ }
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \}\ }
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
