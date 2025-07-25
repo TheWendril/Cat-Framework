@@ -1,0 +1,9 @@
+HAVE_DOT                  = YES
+CLASS_DIAGRAMS            = YES
+COLLABORATION_GRAPH       = YES
+CALL_GRAPH                = YES
+CALLER_GRAPH              = YES
+DOT_IMAGE_FORMAT          = svg
+GENERATE_HTML             = YES
+EXTRACT_ALL               = YES
+PROJECT_NAME              = "Cat Framework"

@@ -1,0 +1,15 @@
+<map id="CAT::Element::notify" name="CAT::Element::notify">
+<area shape="rect" id="Node000001" title=" " alt="" coords="659,56,802,83"/>
+<area shape="rect" id="Node000002" href="$classCAT_1_1Monitor.html#a6d4755004618b34ae3117237c8490f5a" title=" " alt="" coords="444,5,567,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="652,55,567,35,568,30,654,49"/>
+<area shape="rect" id="Node000003" href="$classCAT_1_1Planner.html#aa6153eb818b576a3f2ac80f661234efd" title=" " alt="" coords="443,56,567,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="644,72,568,72,568,67,644,67"/>
+<area shape="rect" id="Node000005" href="$classCAT_1_1Analyzer.html#a6a7d6e35823b990c5490a7079b174f6a" title=" " alt="" coords="399,107,611,133"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="654,89,568,109,567,103,652,84"/>
+<area shape="rect" id="Node000004" href="$classCAT_1_1Planner.html#a8bfb6e967cd4a5d5211309b5679e66aa" title=" " alt="" coords="206,56,351,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="427,72,352,72,352,67,427,67"/>
+<area shape="rect" id="Node000006" href="$classCAT_1_1Analyzer.html#ab65c9a961c0003710774c7fe0da400dc" title=" " alt="" coords="213,107,344,133"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="384,123,344,123,344,117,384,117"/>
+<area shape="rect" id="Node000007" href="$classCAT_1_1Analyzer.html#a250843ae34626605db631f542eccdbdf" title=" " alt="" coords="5,107,158,133"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="197,123,158,123,158,117,197,117"/>
+</map>

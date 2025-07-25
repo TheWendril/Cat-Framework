@@ -1,0 +1,76 @@
+\doxysection{CAT\+::Knowledge Class Reference}
+\hypertarget{classCAT_1_1Knowledge}{}\label{classCAT_1_1Knowledge}\index{CAT::Knowledge@{CAT::Knowledge}}
+
+
+{\ttfamily \#include $<$knowledge.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classCAT_1_1Knowledge_ada2e8a0f7edb72d9d1a20d913c8db28a}{set\+Scope\+Model}} (CAT\+::\+Model model)
+\item 
+CAT\+::\+Model \mbox{\hyperlink{classCAT_1_1Knowledge_a55786a4a37525588c7b17d2999aefe08}{get\+Scope\+Model}} ()
+\item 
+void \mbox{\hyperlink{classCAT_1_1Knowledge_acbffd1ee9fb5dca876f4427236e08ec9}{set\+Current\+State}} (std\+::shared\+\_\+ptr$<$ CAT\+::\+Model $>$ model)
+\item 
+std\+::shared\+\_\+ptr$<$ CAT\+::\+Model $>$ \mbox{\hyperlink{classCAT_1_1Knowledge_ae4ff76a7f1acc1965960c32be838390c}{get\+Current\+State}} ()
+\item 
+std\+::list$<$ std\+::shared\+\_\+ptr$<$ CAT\+::\+Model $>$ $>$ \mbox{\hyperlink{classCAT_1_1Knowledge_a7888b4895bd3e836afec49f404248d15}{get\+Data\+History}} ()
+\item 
+void \mbox{\hyperlink{classCAT_1_1Knowledge_abe6915b73f125cccec91749c096fc763}{set\+Next\+Strategy}} (std\+::shared\+\_\+ptr$<$ CAT\+::\+Strategy $>$ strategy)
+\item 
+std\+::shared\+\_\+ptr$<$ CAT\+::\+Strategy $>$ \mbox{\hyperlink{classCAT_1_1Knowledge_adc8fd034a685f8c06072aadeb2fd004e}{get\+Next\+Strategy}} ()
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{classCAT_1_1Knowledge_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classCAT_1_1Knowledge_ae4ff76a7f1acc1965960c32be838390c}\index{CAT::Knowledge@{CAT::Knowledge}!getCurrentState@{getCurrentState}}
+\index{getCurrentState@{getCurrentState}!CAT::Knowledge@{CAT::Knowledge}}
+\doxysubsubsection{\texorpdfstring{getCurrentState()}{getCurrentState()}}
+{\footnotesize\ttfamily \label{classCAT_1_1Knowledge_ae4ff76a7f1acc1965960c32be838390c} 
+std\+::shared\+\_\+ptr$<$ CAT\+::\+Model $>$ CAT\+::\+Knowledge\+::get\+Current\+State (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classCAT_1_1Knowledge_a7888b4895bd3e836afec49f404248d15}\index{CAT::Knowledge@{CAT::Knowledge}!getDataHistory@{getDataHistory}}
+\index{getDataHistory@{getDataHistory}!CAT::Knowledge@{CAT::Knowledge}}
+\doxysubsubsection{\texorpdfstring{getDataHistory()}{getDataHistory()}}
+{\footnotesize\ttfamily \label{classCAT_1_1Knowledge_a7888b4895bd3e836afec49f404248d15} 
+std\+::list$<$ std\+::shared\+\_\+ptr$<$ CAT\+::\+Model $>$ $>$ CAT\+::\+Knowledge\+::get\+Data\+History (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classCAT_1_1Knowledge_adc8fd034a685f8c06072aadeb2fd004e}\index{CAT::Knowledge@{CAT::Knowledge}!getNextStrategy@{getNextStrategy}}
+\index{getNextStrategy@{getNextStrategy}!CAT::Knowledge@{CAT::Knowledge}}
+\doxysubsubsection{\texorpdfstring{getNextStrategy()}{getNextStrategy()}}
+{\footnotesize\ttfamily \label{classCAT_1_1Knowledge_adc8fd034a685f8c06072aadeb2fd004e} 
+std\+::shared\+\_\+ptr$<$ CAT\+::\+Strategy $>$ CAT\+::\+Knowledge\+::get\+Next\+Strategy (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classCAT_1_1Knowledge_a55786a4a37525588c7b17d2999aefe08}\index{CAT::Knowledge@{CAT::Knowledge}!getScopeModel@{getScopeModel}}
+\index{getScopeModel@{getScopeModel}!CAT::Knowledge@{CAT::Knowledge}}
+\doxysubsubsection{\texorpdfstring{getScopeModel()}{getScopeModel()}}
+{\footnotesize\ttfamily \label{classCAT_1_1Knowledge_a55786a4a37525588c7b17d2999aefe08} 
+CAT\+::\+Model CAT\+::\+Knowledge\+::get\+Scope\+Model (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classCAT_1_1Knowledge_acbffd1ee9fb5dca876f4427236e08ec9}\index{CAT::Knowledge@{CAT::Knowledge}!setCurrentState@{setCurrentState}}
+\index{setCurrentState@{setCurrentState}!CAT::Knowledge@{CAT::Knowledge}}
+\doxysubsubsection{\texorpdfstring{setCurrentState()}{setCurrentState()}}
+{\footnotesize\ttfamily \label{classCAT_1_1Knowledge_acbffd1ee9fb5dca876f4427236e08ec9} 
+void CAT\+::\+Knowledge\+::set\+Current\+State (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ CAT\+::\+Model $>$}]{model}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classCAT_1_1Knowledge_abe6915b73f125cccec91749c096fc763}\index{CAT::Knowledge@{CAT::Knowledge}!setNextStrategy@{setNextStrategy}}
+\index{setNextStrategy@{setNextStrategy}!CAT::Knowledge@{CAT::Knowledge}}
+\doxysubsubsection{\texorpdfstring{setNextStrategy()}{setNextStrategy()}}
+{\footnotesize\ttfamily \label{classCAT_1_1Knowledge_abe6915b73f125cccec91749c096fc763} 
+void CAT\+::\+Knowledge\+::set\+Next\+Strategy (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ CAT\+::\+Strategy $>$}]{strategy}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classCAT_1_1Knowledge_ada2e8a0f7edb72d9d1a20d913c8db28a}\index{CAT::Knowledge@{CAT::Knowledge}!setScopeModel@{setScopeModel}}
+\index{setScopeModel@{setScopeModel}!CAT::Knowledge@{CAT::Knowledge}}
+\doxysubsubsection{\texorpdfstring{setScopeModel()}{setScopeModel()}}
+{\footnotesize\ttfamily \label{classCAT_1_1Knowledge_ada2e8a0f7edb72d9d1a20d913c8db28a} 
+void CAT\+::\+Knowledge\+::set\+Scope\+Model (\begin{DoxyParamCaption}\item[{CAT\+::\+Model}]{model}{}\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{knowledge_8hpp}{knowledge.\+hpp}}\item 
+\mbox{\hyperlink{knowledge_8cpp}{knowledge.\+cpp}}\end{DoxyCompactItemize}
