@@ -1,0 +1,50 @@
+\doxysection{element.\+hpp}
+\hypertarget{element_8hpp_source}{}\label{element_8hpp_source}\index{core/element.hpp@{core/element.hpp}}
+\mbox{\hyperlink{element_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ written\ by\ Wendril\ Avila}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ \ \ \ Main\ header\ for\ Cat\ Framework}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ \ \ \ "{}Simplify.\ Evaluate.\ Move\ forward."{}}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ ELEMENT\_HPP}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ ELEMENT\_HPP}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{compositeNode_8hpp}{compositeNode.hpp}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{knowledge_8hpp}{knowledge.hpp}}"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceCAT}{CAT}}\{}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }Action;}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCAT_1_1Element_aaa7a8bafebed79ed774878cc3c3c9d47}{Element}}\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{classCAT_1_1Knowledge}{CAT::Knowledge}}\ *\ \mbox{\hyperlink{classCAT_1_1Element_a6f30e866388f16a8f0a964a2789d9c24}{localKnowledge}};}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{classCAT_1_1Knowledge}{CAT::Knowledge}}\ *\ \mbox{\hyperlink{classCAT_1_1Element_aaf5cd162f740d92f6e29cade009c5657}{moduleKnowledge}};}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{classCAT_1_1Element}{CAT::Element}}\ *\ \mbox{\hyperlink{classCAT_1_1Element_a0e44038db4c0c4aa39a488d6cf402252}{observer}};}
+\DoxyCodeLine{00026\ \ \ \ \ CAT::Action*\ \mbox{\hyperlink{classCAT_1_1Element_ac43849e75d53c7a70bb37eefa9f1b775}{action}};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCAT_1_1Element_ab5dbde2570c07bb973f812ba163860d7}{notify}}();}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{classCAT_1_1Element_aaa7a8bafebed79ed774878cc3c3c9d47}{Element}}();}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCAT_1_1Element_aa0ed1c205cbcdb9ea59aee7998725f75}{attach}}(\mbox{\hyperlink{classCAT_1_1Element}{CAT::Element}}*\ element);}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCAT_1_1Element_a14771a4e3e9fe70684f6bf1d376225b0}{update}}()\ =\ 0;}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCAT_1_1Element_a0002b0b4df88a4bffb50dca0d65d63e5}{setAction}}(CAT::Action\&\ \mbox{\hyperlink{classCAT_1_1Element_ac43849e75d53c7a70bb37eefa9f1b775}{action}});}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCAT_1_1Element_af6dadc3641a04de34f2c79db9a0b8bc5}{run}}();}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{classCAT_1_1Knowledge}{CAT::Knowledge}}\ *\ \mbox{\hyperlink{classCAT_1_1Element_a34f64884912d14aa5b30a27e6f4f50b9}{getLocalKnowledge}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCAT_1_1Element_a848eee322b7d5f41369849326cc62dad}{setLocalKnowledge}}(\mbox{\hyperlink{classCAT_1_1Knowledge}{CAT::Knowledge}}\ *k);}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCAT_1_1Element_a857a86748aed114e9eb36a0275511e59}{setModuleKnowledge}}(\mbox{\hyperlink{classCAT_1_1Knowledge}{CAT::Knowledge}}\ *k);}
+\DoxyCodeLine{00040\ \};\ }
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \}\ }
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

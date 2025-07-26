@@ -1,0 +1,11 @@
+<map id="CAT::App" name="CAT::App">
+<area shape="rect" id="Node000001" title=" " alt="" coords="50,355,128,381"/>
+<area shape="rect" id="Node000002" href="$classCAT_1_1Module.html" title=" " alt="" coords="41,256,137,283"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="92,298,92,354,86,354,86,298"/>
+<area shape="rect" id="Node000003" href="$classCAT_1_1ModularComponent.html" title=" " alt="" coords="5,180,173,207"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="92,222,92,256,86,256,86,222"/>
+<area shape="rect" id="Node000004" href="$classCAT_1_1CompositeNode.html" title=" " alt="" coords="15,104,163,131"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="92,146,92,180,86,180,86,146"/>
+<area shape="rect" id="Node000005" href="$classCAT_1_1Knowledge.html" title=" " alt="" coords="30,5,148,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="92,48,92,104,86,104,86,48"/>
+</map>

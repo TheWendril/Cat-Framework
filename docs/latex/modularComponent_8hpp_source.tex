@@ -1,0 +1,38 @@
+\doxysection{modular\+Component.\+hpp}
+\hypertarget{modularComponent_8hpp_source}{}\label{modularComponent_8hpp_source}\index{core/modularComponent.hpp@{core/modularComponent.hpp}}
+\mbox{\hyperlink{modularComponent_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ written\ by\ Wendril\ Avila}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ \ \ \ Main\ header\ for\ Cat\ Framework}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ \ \ \ "{}Simplify.\ Evaluate.\ Move\ forward."{}}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ MODULARCOMPONENT\_HPP}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ MODULARCOMPONENT\_HPP}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{compositeNode_8hpp}{compositeNode.hpp}}"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceCAT}{CAT}}\{}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCAT_1_1ModularComponent_a8c60be32a89975ac1f3a75bcff113c7e}{ModularComponent}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classCAT_1_1CompositeNode}{CAT::CompositeNode}}\ \{}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00020\ \ \ \ \ std::list<std::shared\_ptr<CAT::CompositeNode>>\ Childrens;}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{classCAT_1_1ModularComponent_a8c60be32a89975ac1f3a75bcff113c7e}{ModularComponent}}();}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classCAT_1_1ModularComponent_a961f8962514d550cc561048d3bed3da7}{\string~ModularComponent}}();}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCAT_1_1ModularComponent_a73d0ffd2c0f47cd9b90a34462475c63f}{init}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCAT_1_1ModularComponent_ab1b1c61e549da966fee5aa844d077389}{add}}(std::shared\_ptr<CAT::CompositeNode>\ compositeNode);}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCAT_1_1ModularComponent_a76c696a317cb8546519d55f0ed9f5224}{createModule}}()\ =\ 0;}
+\DoxyCodeLine{00028\ \};\ }
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \}\ }
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

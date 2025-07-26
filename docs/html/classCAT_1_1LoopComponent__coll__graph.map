@@ -1,0 +1,23 @@
+<map id="CAT::LoopComponent" name="CAT::LoopComponent">
+<area shape="rect" id="Node000001" title=" " alt="" coords="797,117,946,144"/>
+<area shape="rect" id="Node000002" href="$classCAT_1_1CompositeNode.html" title=" " alt="" coords="412,45,560,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="576,58,672,66,773,85,812,99,845,114,843,119,810,104,772,90,671,72,576,63"/>
+<area shape="rect" id="Node000003" href="$classCAT_1_1Knowledge.html" title=" " alt="" coords="5,45,124,72"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="110,37,147,27,179,23,204,23,262,27,477,27,571,32,691,45,733,50,774,61,820,87,856,115,853,119,817,92,772,66,732,55,690,51,570,37,477,32,262,32,204,28,180,28,148,32,112,42"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="139,56,412,56,412,61,139,61"/>
+<area shape="rect" id="Node000005" href="$classCAT_1_1Element.html" title=" " alt="" coords="286,147,388,173"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="88,82,115,108,149,131,183,143,219,152,286,158,285,163,218,157,181,149,146,136,112,112,84,85"/>
+<area shape="rect" id="Node000004" href="$classCAT_1_1Analyzer.html" title=" " alt="" coords="585,96,690,123"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="706,113,797,121,796,126,706,118"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="403,140,412,139,584,112,585,118,412,144,404,146"/>
+<area shape="poly" id="edge7_Node000005_Node000005" title=" " alt="" coords="312,129,321,123,337,120,352,122,361,128,364,138,360,147,355,145,359,137,357,132,350,127,337,125,323,127,315,133"/>
+<area shape="rect" id="Node000006" href="$classCAT_1_1Planner.html" title=" " alt="" coords="588,147,687,173"/>
+<area shape="poly" id="edge9_Node000006_Node000005" title=" " alt="" coords="403,157,588,157,588,163,403,163"/>
+<area shape="rect" id="Node000007" href="$classCAT_1_1Executor.html" title=" " alt="" coords="584,197,691,224"/>
+<area shape="poly" id="edge11_Node000007_Node000005" title=" " alt="" coords="404,168,584,199,583,204,403,174"/>
+<area shape="rect" id="Node000008" href="$classCAT_1_1Monitor.html" title=" " alt="" coords="589,251,686,277"/>
+<area shape="poly" id="edge13_Node000008_Node000005" title=" " alt="" coords="373,179,413,200,506,231,589,252,588,257,504,237,411,205,370,184"/>
+<area shape="poly" id="edge8_Node000001_Node000006" title=" " alt="" coords="702,155,772,148,808,142,809,147,773,153,702,160"/>
+<area shape="poly" id="edge10_Node000001_Node000007" title=" " alt="" coords="705,200,772,183,814,163,849,142,851,147,816,168,774,188,706,205"/>
+<area shape="poly" id="edge12_Node000001_Node000008" title=" " alt="" coords="701,252,737,242,771,227,799,208,823,185,858,143,862,146,827,188,802,212,774,232,739,247,702,257"/>
+</map>

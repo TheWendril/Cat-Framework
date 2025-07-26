@@ -1,0 +1,160 @@
+\doxysection{CAT\+::Analyzer Class Reference}
+\hypertarget{classCAT_1_1Analyzer}{}\label{classCAT_1_1Analyzer}\index{CAT::Analyzer@{CAT::Analyzer}}
+
+
+{\ttfamily \#include $<$analyzer.\+hpp$>$}
+
+
+
+Inheritance diagram for CAT\+::Analyzer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=159pt]{classCAT_1_1Analyzer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for CAT\+::Analyzer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{classCAT_1_1Analyzer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classCAT_1_1Analyzer_ab65c9a961c0003710774c7fe0da400dc}{run}} () override
+\item 
+void \mbox{\hyperlink{classCAT_1_1Analyzer_a250843ae34626605db631f542eccdbdf}{update}} () override
+\item 
+void \mbox{\hyperlink{classCAT_1_1Analyzer_a6a7d6e35823b990c5490a7079b174f6a}{verify\+Constraints}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCAT_1_1Element}{CAT\+::\+Element}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCAT_1_1Element_aaa7a8bafebed79ed774878cc3c3c9d47}{Element}} ()
+\item 
+void \mbox{\hyperlink{classCAT_1_1Element_aa0ed1c205cbcdb9ea59aee7998725f75}{attach}} (\mbox{\hyperlink{classCAT_1_1Element}{CAT\+::\+Element}} \texorpdfstring{$\ast$}{*}element)
+\item 
+void \mbox{\hyperlink{classCAT_1_1Element_a0002b0b4df88a4bffb50dca0d65d63e5}{set\+Action}} (CAT\+::\+Action \&\mbox{\hyperlink{classCAT_1_1Element_ac43849e75d53c7a70bb37eefa9f1b775}{action}})
+\item 
+\mbox{\hyperlink{classCAT_1_1Knowledge}{CAT\+::\+Knowledge}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classCAT_1_1Element_a34f64884912d14aa5b30a27e6f4f50b9}{get\+Local\+Knowledge}} () const
+\item 
+void \mbox{\hyperlink{classCAT_1_1Element_a848eee322b7d5f41369849326cc62dad}{set\+Local\+Knowledge}} (\mbox{\hyperlink{classCAT_1_1Knowledge}{CAT\+::\+Knowledge}} \texorpdfstring{$\ast$}{*}k)
+\item 
+void \mbox{\hyperlink{classCAT_1_1Element_a857a86748aed114e9eb36a0275511e59}{set\+Module\+Knowledge}} (\mbox{\hyperlink{classCAT_1_1Knowledge}{CAT\+::\+Knowledge}} \texorpdfstring{$\ast$}{*}k)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::list$<$ \mbox{\hyperlink{classCAT_1_1ConstraintModel}{CAT\+::\+Constraint\+Model}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{classCAT_1_1Analyzer_a8303639fbe725cbc56c9a80a27841869}{constraints}} \{\}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classCAT_1_1Element}{CAT\+::\+Element}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classCAT_1_1Element_ab5dbde2570c07bb973f812ba163860d7}{notify}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classCAT_1_1Element}{CAT\+::\+Element}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCAT_1_1Knowledge}{CAT\+::\+Knowledge}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classCAT_1_1Element_a6f30e866388f16a8f0a964a2789d9c24}{local\+Knowledge}}
+\item 
+\mbox{\hyperlink{classCAT_1_1Knowledge}{CAT\+::\+Knowledge}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classCAT_1_1Element_aaf5cd162f740d92f6e29cade009c5657}{module\+Knowledge}}
+\item 
+\mbox{\hyperlink{classCAT_1_1Element}{CAT\+::\+Element}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classCAT_1_1Element_a0e44038db4c0c4aa39a488d6cf402252}{observer}}
+\item 
+CAT\+::\+Action \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classCAT_1_1Element_ac43849e75d53c7a70bb37eefa9f1b775}{action}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{classCAT_1_1Analyzer_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classCAT_1_1Analyzer_ab65c9a961c0003710774c7fe0da400dc}\index{CAT::Analyzer@{CAT::Analyzer}!run@{run}}
+\index{run@{run}!CAT::Analyzer@{CAT::Analyzer}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily \label{classCAT_1_1Analyzer_ab65c9a961c0003710774c7fe0da400dc} 
+void CAT\+::\+Analyzer\+::run (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classCAT_1_1Element_af6dadc3641a04de34f2c79db9a0b8bc5}{CAT\+::\+Element}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCAT_1_1Analyzer_ab65c9a961c0003710774c7fe0da400dc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=329pt]{classCAT_1_1Analyzer_ab65c9a961c0003710774c7fe0da400dc_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classCAT_1_1Analyzer_a250843ae34626605db631f542eccdbdf}\index{CAT::Analyzer@{CAT::Analyzer}!update@{update}}
+\index{update@{update}!CAT::Analyzer@{CAT::Analyzer}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{classCAT_1_1Analyzer_a250843ae34626605db631f542eccdbdf} 
+void CAT\+::\+Analyzer\+::update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classCAT_1_1Element_a14771a4e3e9fe70684f6bf1d376225b0}{CAT\+::\+Element}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCAT_1_1Analyzer_a250843ae34626605db631f542eccdbdf_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classCAT_1_1Analyzer_a6a7d6e35823b990c5490a7079b174f6a}\index{CAT::Analyzer@{CAT::Analyzer}!verifyConstraints@{verifyConstraints}}
+\index{verifyConstraints@{verifyConstraints}!CAT::Analyzer@{CAT::Analyzer}}
+\doxysubsubsection{\texorpdfstring{verifyConstraints()}{verifyConstraints()}}
+{\footnotesize\ttfamily \label{classCAT_1_1Analyzer_a6a7d6e35823b990c5490a7079b174f6a} 
+void CAT\+::\+Analyzer\+::verify\+Constraints (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCAT_1_1Analyzer_a6a7d6e35823b990c5490a7079b174f6a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCAT_1_1Analyzer_a6a7d6e35823b990c5490a7079b174f6a_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-variable-members}
+\Hypertarget{classCAT_1_1Analyzer_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classCAT_1_1Analyzer_a8303639fbe725cbc56c9a80a27841869}\index{CAT::Analyzer@{CAT::Analyzer}!constraints@{constraints}}
+\index{constraints@{constraints}!CAT::Analyzer@{CAT::Analyzer}}
+\doxysubsubsection{\texorpdfstring{constraints}{constraints}}
+{\footnotesize\ttfamily \label{classCAT_1_1Analyzer_a8303639fbe725cbc56c9a80a27841869} 
+std\+::list$<$\mbox{\hyperlink{classCAT_1_1ConstraintModel}{CAT\+::\+Constraint\+Model}}\texorpdfstring{$\ast$}{*}$>$ CAT\+::\+Analyzer\+::constraints \{\}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+core/\mbox{\hyperlink{analyzer_8hpp}{analyzer.\+hpp}}\item 
+core/\mbox{\hyperlink{analyzer_8cpp}{analyzer.\+cpp}}\end{DoxyCompactItemize}

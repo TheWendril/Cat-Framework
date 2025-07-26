@@ -1,0 +1,7 @@
+<map id="CAT::Module" name="CAT::Module">
+<area shape="rect" id="Node000001" title=" " alt="" coords="41,155,137,181"/>
+<area shape="rect" id="Node000002" href="$classCAT_1_1ModularComponent.html" title=" " alt="" coords="5,80,173,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="92,122,92,154,86,154,86,122"/>
+<area shape="rect" id="Node000003" href="$classCAT_1_1CompositeNode.html" title=" " alt="" coords="15,5,163,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="92,48,92,80,86,80,86,48"/>
+</map>
